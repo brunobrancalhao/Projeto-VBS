@@ -11,6 +11,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ApiProvider } from '../providers/api/api';
 
+import { GoogleMaps } from '@ionic-native/google-maps';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -19,7 +21,7 @@ import { ApiProvider } from '../providers/api/api';
     MapsPage
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,  
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -32,6 +34,7 @@ import { ApiProvider } from '../providers/api/api';
   providers: [
     StatusBar,
     SplashScreen,
+    GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ApiProvider
   ]
