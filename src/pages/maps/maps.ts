@@ -34,18 +34,24 @@ export class MapsPage {
       let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
       let mapOptions = {
         center: latLng,
-        zoom: 15,
+        zoom: 16,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       }
       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-      this.addMarker(this.map);
+      this.addMarker(this.map, latLng);
     });
 
     this.directionsDisplay.setMap(this.map);
   }
-  addMarker(map:any){
+  addMarker(map:any, latLng){
     var image = 'https://png.icons8.com/color/30/000000/test-tube.png';
-
+    var localAtual =  'https://png.icons8.com/color/30/B1D2E6/marker.png';
+    var marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: latLng,
+      icon: localAtual
+    });
 
     var marker = new google.maps.Marker({
       map: map,
@@ -54,7 +60,7 @@ export class MapsPage {
       icon: image
     });
     var infoWindow = new google.maps.InfoWindow({
-      content: 'BioAnalises'
+      content: 'BioAnalises - Telefone: 3722-9005'
     });
     marker.addListener('click', function() {
       infoWindow.open(map, marker);
@@ -68,7 +74,7 @@ export class MapsPage {
       icon: image
     });
     var infoWindow2 = new google.maps.InfoWindow({
-      content: 'Carlos Chagas'
+      content: 'Carlos Chagas - Telefone: 3722-4375'
     });
     marker2.addListener('click', function() {
       infoWindow2.open(map, marker2);
@@ -82,7 +88,7 @@ export class MapsPage {
       icon: image
     });
     var infoWindow3 = new google.maps.InfoWindow({
-      content: 'Central'
+      content: 'Central - Telefone: 3722-6161'
     });
     marker3.addListener('click', function() {
       infoWindow3.open(map, marker3);
@@ -96,7 +102,7 @@ export class MapsPage {
       icon: image
     });
     var infoWindow4 = new google.maps.InfoWindow({
-      content: 'Dr. Alonso Laboratório'
+      content: 'Dr. Alonso Laboratório - Telefone: 3721-2800'
     });
     marker4.addListener('click', function() {
       infoWindow4.open(map, marker4);
@@ -110,7 +116,7 @@ export class MapsPage {
       icon: image
     });
     var infoWindow5 = new google.maps.InfoWindow({
-      content: 'Labcenter'
+      content: 'Labcenter - Telefone: 3724-3444'
     });
     marker5.addListener('click', function() {
       infoWindow5.open(map, marker5);
@@ -124,7 +130,7 @@ export class MapsPage {
       icon: image
     });
     var infoWindow6 = new google.maps.InfoWindow({
-      content: 'Laboratorio Municipal'
+      content: 'Laboratorio Municipal - Telefone: 3721-1843'
     });
     marker6.addListener('click', function() {
       infoWindow6.open(map, marker6);
@@ -137,7 +143,7 @@ export class MapsPage {
       icon: image
     });
     var infoWindow7 = new google.maps.InfoWindow({
-      content: 'Laboratório UNIFRAN'
+      content: 'Laboratório UNIFRAN - Telefone: 3711-8874'
     });
     marker7.addListener('click', function() {
       infoWindow7.open(map, marker7);
@@ -151,7 +157,7 @@ export class MapsPage {
       icon: image
     });
     var infoWindow8 = new google.maps.InfoWindow({
-      content: 'Laborial'
+      content: 'Laborial - Telefone: 3724-0776'
     });
     marker8.addListener('click', function() {
       infoWindow8.open(map, marker8);
@@ -165,7 +171,7 @@ export class MapsPage {
       icon: image
     });
     var infoWindow9 = new google.maps.InfoWindow({
-      content: 'Santa Casa'
+      content: 'Santa Casa - Telefone: 3711-4000'
     });
     marker9.addListener('click', function() {
       infoWindow9.open(map, marker9);
@@ -179,7 +185,7 @@ export class MapsPage {
       icon: image
     });
     var infoWindow10 = new google.maps.InfoWindow({
-      content: 'Hormolab'
+      content: 'Hormolab - Telefone: 3721-1543'
     });
     marker10.addListener('click', function() {
       infoWindow10.open(map, marker10);
@@ -193,7 +199,7 @@ export class MapsPage {
       icon: image
     });
     var infoWindow11 = new google.maps.InfoWindow({
-      content: 'Hormolab'
+      content: 'Hormolab - Telefone: 3721-1543'
     });
     marker11.addListener('click', function() {
       infoWindow11.open(map, marker11);
@@ -207,7 +213,7 @@ export class MapsPage {
       icon: image
     });
     var infoWindow12 = new google.maps.InfoWindow({
-      content: 'Hormolab'
+      content: 'Hormolab - Telefone: 3721-1543'
     });
     marker12.addListener('click', function() {
       infoWindow12.open(map, marker12);
@@ -221,7 +227,7 @@ export class MapsPage {
       icon: image
     });
     var infoWindow13 = new google.maps.InfoWindow({
-      content: 'Hormolab'
+      content: 'Hormolab - Telefone: 3721-1543'
     });
     marker13.addListener('click', function() {
       infoWindow13.open(map, marker13);
@@ -235,7 +241,7 @@ export class MapsPage {
       icon: image
     });
     var infoWindow14 = new google.maps.InfoWindow({
-      content: 'Hormolab'
+      content: 'Hormolab - Telefone: 3721-1543'
     });
     marker14.addListener('click', function() {
       infoWindow14.open(map, marker14);
