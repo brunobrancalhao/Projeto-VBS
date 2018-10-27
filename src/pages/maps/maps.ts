@@ -4,7 +4,6 @@ import { NavController } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 import { LatLng } from '@ionic-native/google-maps';
 
-declare var   ;
 
 @IonicPage()
 @Component({
