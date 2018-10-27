@@ -2,6 +2,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage } from 'ionic-angular';
 import { NavController } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
+import { LatLng } from '@ionic-native/google-maps';
 
 declare var   ;
 
@@ -37,9 +38,17 @@ export class MapsPage {
         mapTypeId: google.maps.MapTypeId.ROADMAP
       }
       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+      this.addMarker(this.map);
     });
 
     this.directionsDisplay.setMap(this.map);
   }
+  addMarker(map:any){
 
+    let marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: map.getCenter()
+    });
+  }
 }
