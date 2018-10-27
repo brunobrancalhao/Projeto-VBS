@@ -34,7 +34,8 @@ export class HomePage {
               console.log('Saved clicked');
             }
           }
-        ]
+        ],
+        cssClass: 'alert-list'
       });
       prompt.present();
     }

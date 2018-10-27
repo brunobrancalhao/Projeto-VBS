@@ -1,3 +1,94 @@
 page-home {
+  @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
+  .card {
+    width: 85%;
+    height: 200px;
+    margin: 0 auto;
+    background: url('../../assets/imgs/home/cartaodosus2017-2.jpg') center no-repeat;
+    background-size: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: none;
+
+    .content {
+      margin: 130px 0 0 20px;
+      color: #FFFFFF;
+
+      .card-header {
+        max-width: 75%;
+        padding: 0 16px 8px;
+        color: #FFFFFF;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .card-content {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.alert-list {
+  background: rgba(0, 0, 0, .5);
+  font-family: 'Ubuntu', sans-serif;
+
+  .alert-wrapper {
+    border-radius: 20px;
+
+    .alert-head {
+      margin-bottom: 15px;
+      padding: 15px 0;
+      background: #0F4098;
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    .alert-message {
+      color: #575757;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .alert-input-group {
+      max-width: 80%;
+      margin: 0 auto 20px;
+      padding: 0;
+
+
+      input {
+        color: #575757;
+        text-align: center;
+        border: 0;
+        border-bottom: 1px #0F4098 solid;
+        border-radius: 0;
+      }
+    }
+
+    .alert-button-group {
+      padding: 0;
+
+      .alert-button {
+        display: inline-block;
+        width: 50%;
+        margin: 0;
+        color: #575757;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+        border: 0;
+
+        &:nth-child(2) {
+          color: #2B67BD;
+        }
+
+        .button-inner {
+          justify-content: center;
+        }
+      }
+    }
+  }
 }
