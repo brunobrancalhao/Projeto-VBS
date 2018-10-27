@@ -1,0 +1,14 @@
+ion-title {
+  text-align: center;
+}
+
+button {
+  &.fab {
+    margin: 0 10px !important;
+    padding: 0;
+    background: #0F4098;
+    color: #FFFFFF;
+    opacity: 1;
+    box-shadow: none;
+  }
+}

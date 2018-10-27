@@ -1,19 +1,27 @@
-<ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-content> 
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
-  </ion-content>
-
-</ion-menu>
+<div padding>
+  <div class="popup-menu">
+    <div class="popup-menu-overlay" [ngClass]="{'in': openMenu}" (click)="togglePopupMenu()"></div>
+    <div class="popup-menu-toggle" (click)="togglePopupMenu()" [ngClass]="{'out': openMenu}"></div>
+    <div class="popup-menu-panel" [ngClass]="{'in': openMenu}">
+      <div class="popup-menu-item" (click)="goToPacient()">
+        <ion-icon class="ico-pacient"></ion-icon>
+        <span>Pacientes</span>
+      </div>
+      <div class="popup-menu-item" (click)="goToLab()">
+        <ion-icon class="ico-lab"></ion-icon>
+        <span>Laboratórios</span>
+      </div>
+      <div class="popup-menu-item" (click)="goToExam()">
+        <ion-icon class="ico-exam"></ion-icon>
+        <span>Tipos de Exame</span>
+      </div>
+      <div class="popup-menu-item" (click)="goToAbout()">
+        <ion-icon class="ico-about"></ion-icon>
+        <span>Sobre</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

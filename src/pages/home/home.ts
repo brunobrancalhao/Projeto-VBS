@@ -23,13 +23,15 @@ export class HomePage {
     await this.delay(1000);
     this.getUsers();
   }
-  getUsers(){
-      var users = [];
-      for (var i = 0; i<localStorage.length; i++) {
-        if(localStorage.key(i) != 'token'){
+  getUsers() {
+    var users = [];
+    for (var i = 0; i < localStorage.length; i++) {
+      if (localStorage.getItem(localStorage.key(i)).length > 0) {
+        if (localStorage.key(i) != 'token' && localStorage.key(i) != 'ionic_lastdevices') {
           this.users.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
         }
       }
+    }
   }
 
     addCardSUS() {
@@ -55,10 +57,10 @@ export class HomePage {
               this.ionViewDidEnter();
             }
           }
-        ],
-        cssClass: 'alert-list'
-      });
-      prompt.present();
-    }
+      ],
+      cssClass: 'alert-list'
+    });
+    prompt.present();
+  }
 
 }
