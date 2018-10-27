@@ -45,24 +45,200 @@ export class MapsPage {
   }
   addMarker(map:any){
     var image = 'https://png.icons8.com/color/30/000000/test-tube.png';
+
+
     var marker = new google.maps.Marker({
       map: map,
       animation: google.maps.Animation.DROP,
-      position: new google.maps.LatLng(-20.53524503, -47.39349084),
-      title: 'Laboratório 1',
+      position: new google.maps.LatLng(-20.5396044, -47.3998592),
       icon: image
     });
     var infoWindow = new google.maps.InfoWindow({
-      content: 'Laboratório X'
+      content: 'BioAnalises'
     });
     marker.addListener('click', function() {
       infoWindow.open(map, marker);
     });
-    new google.maps.Marker({
+
+    
+    var marker2 = new google.maps.Marker({
       map: map,
       animation: google.maps.Animation.DROP,
-      position: new google.maps.LatLng(-20.53367768, -47.38117414),
-      
+      position: new google.maps.LatLng(-20.5370547, -47.3997377),
+      icon: image
+    });
+    var infoWindow2 = new google.maps.InfoWindow({
+      content: 'Carlos Chagas'
+    });
+    marker2.addListener('click', function() {
+      infoWindow2.open(map, marker2);
+    });
+
+
+    var marker3 = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: new google.maps.LatLng(-20.5392807, -47.3959326),
+      icon: image
+    });
+    var infoWindow3 = new google.maps.InfoWindow({
+      content: 'Central'
+    });
+    marker3.addListener('click', function() {
+      infoWindow3.open(map, marker3);
+    });
+
+
+    var marker4 = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: new google.maps.LatLng(-20.5386885, -47.396068),
+      icon: image
+    });
+    var infoWindow4 = new google.maps.InfoWindow({
+      content: 'Dr. Alonso Laboratório'
+    });
+    marker4.addListener('click', function() {
+      infoWindow4.open(map, marker4);
+    });
+
+
+    var marker5 = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: new google.maps.LatLng(-20.5396672, -47.3963436),
+      icon: image
+    });
+    var infoWindow5 = new google.maps.InfoWindow({
+      content: 'Labcenter'
+    });
+    marker5.addListener('click', function() {
+      infoWindow5.open(map, marker5);
+    });
+
+
+    var marker6 = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: new google.maps.LatLng(-20.534703, -47.4029826),
+      icon: image
+    });
+    var infoWindow6 = new google.maps.InfoWindow({
+      content: 'Laboratorio Municipal'
+    });
+    marker6.addListener('click', function() {
+      infoWindow6.open(map, marker6);
+    });
+
+    var marker7 = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: new google.maps.LatLng(-20.5706224, -47.4031436),
+      icon: image
+    });
+    var infoWindow7 = new google.maps.InfoWindow({
+      content: 'Laboratório UNIFRAN'
+    });
+    marker7.addListener('click', function() {
+      infoWindow7.open(map, marker7);
+    });
+
+
+    var marker8 = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: new google.maps.LatLng(-20.5365584, -47.3975932),
+      icon: image
+    });
+    var infoWindow8 = new google.maps.InfoWindow({
+      content: 'Laborial'
+    });
+    marker8.addListener('click', function() {
+      infoWindow8.open(map, marker8);
+    });
+
+
+    var marker9 = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: new google.maps.LatLng(-20.5379457, -47.3988805),
+      icon: image
+    });
+    var infoWindow9 = new google.maps.InfoWindow({
+      content: 'Santa Casa'
+    });
+    marker9.addListener('click', function() {
+      infoWindow9.open(map, marker9);
+    });
+
+
+    var marker10 = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: new google.maps.LatLng(-20.5109961, -47.4026196),
+      icon: image
+    });
+    var infoWindow10 = new google.maps.InfoWindow({
+      content: 'Hormolab'
+    });
+    marker10.addListener('click', function() {
+      infoWindow10.open(map, marker10);
+    });
+
+
+    var marker11 = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: new google.maps.LatLng(-20.5362587, -47.4139846),
+      icon: image
+    });
+    var infoWindow11 = new google.maps.InfoWindow({
+      content: 'Hormolab'
+    });
+    marker11.addListener('click', function() {
+      infoWindow11.open(map, marker11);
+    });
+
+
+    var marker12 = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: new google.maps.LatLng(-20.5363928, -47.3986199),
+      icon: image
+    });
+    var infoWindow12 = new google.maps.InfoWindow({
+      content: 'Hormolab'
+    });
+    marker12.addListener('click', function() {
+      infoWindow12.open(map, marker12);
+    });
+
+
+    var marker13 = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: new google.maps.LatLng(-20.5369669, -47.389437),
+      icon: image
+    });
+    var infoWindow13 = new google.maps.InfoWindow({
+      content: 'Hormolab'
+    });
+    marker13.addListener('click', function() {
+      infoWindow13.open(map, marker13);
+    });
+
+
+    var marker14 = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: new google.maps.LatLng(-20.5254519, -47.3639889),
+      icon: image
+    });
+    var infoWindow14 = new google.maps.InfoWindow({
+      content: 'Hormolab'
+    });
+    marker14.addListener('click', function() {
+      infoWindow14.open(map, marker14);
     });
   }
 }

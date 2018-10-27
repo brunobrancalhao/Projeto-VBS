@@ -8,18 +8,18 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
+  <ion-card *ngFor="let user of users">
     <div class="content">
       <ion-card-header>
-        Gabriel Souza Aparecido Machado Luz
+        {{user.nome}}
       </ion-card-header>
       <ion-card-content>
-        898 0034 0054 0716
+        {{user.cartaoSus}}
       </ion-card-content>
     </div>
   </ion-card>
 
-  <ion-card>
+  <!-- <ion-card>
     <div class="content">
       <ion-card-header>
         Marcelo Veronez
@@ -28,7 +28,7 @@
         898 0034 0054 0716
       </ion-card-content>
     </div>
-  </ion-card>
+  </ion-card> -->
 
   <ion-fab right bottom>
     <button ion-fab mini (click)="addCardSUS()">

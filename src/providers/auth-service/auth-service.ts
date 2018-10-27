@@ -8,6 +8,7 @@ import { LocalUser } from '../../domain/local_user';
 import { Usuario } from '../../domain/usuario/usuario';
 import { JwtHelper } from 'angular2-jwt';
 import { StorageService } from '../storage.service/storage.service';
+import { ApiProvider } from '../api/api'; 
 
 @Injectable()
 export class AuthServiceProvider {
@@ -19,7 +20,8 @@ export class AuthServiceProvider {
     private http: Http,
     private glbSrv: GlobalServiceProvider,
     private storage: Storage,
-    private localStorage: StorageService
+    private localStorage: StorageService,
+    private ApiService: ApiProvider
   ) { }
 
   public getUserInfo(): Usuario {
@@ -32,7 +34,9 @@ export class AuthServiceProvider {
 
   successfullLogin(usuario: Usuario) {
     this.currentUser = usuario;
-    this.storage.set('currentUser', usuario);
+    console.log(usuario);
+    this.ApiService.getCardSUS(usuario.cns);
+    //this.localStorage.setLocalUser2(usuario);
 
     this.armazenarToken(usuario.token);
 
