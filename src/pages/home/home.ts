@@ -1,14 +1,29 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
+import { ApiProvider } from './../../providers/api/api';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  users: any[];
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public ApiProvider: ApiProvider) {
 
+  }
+
+  ionViewDidEnter(){
+    this.users = [];
+    this.getUsers();
+  }
+  getUsers(){
+      var users = [];
+      for (var i = 0; i<localStorage.length; i++) {
+        if(localStorage.key(i) != 'token'){
+          this.users.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
+        }
+      }
   }
 
     addCardSUS() {
@@ -17,7 +32,7 @@ export class HomePage {
         message: "Entre com o cartão SUS do paciente",
         inputs: [
           {
-            name: 'Número do cartão',
+            name: 'nlCard',
             placeholder: 'Número'
           },
         ],
@@ -25,13 +40,12 @@ export class HomePage {
           {
             text: 'Cancelar',
             handler: data => {
-              console.log('Cancel clicked');
             }
           },
           {
             text: 'Adicionar',
             handler: data => {
-              console.log('Saved clicked');
+              this.ApiProvider.getCardSUS(data['nlCard']);
             }
           }
         ],
