@@ -1,13 +1,29 @@
 page-login {
-    .formulario
-    {
-        padding-top: 30%
+  .fixed-content {
+    background: #000040;
+
+    .imagem {
+      img {
+        max-width: 80%;
+      }
     }
 
-    .imagem
-    {
-        padding-top: 10%
 
+  }
+
+  .formulario {
+
+    ion-item {
+      margin: 15px 0;
+      padding-left: 0 !important;
+      border-radius: 5px;
+      
+      .item-inner {
+          padding: 0 8px;
+      }
     }
-
+    button {
+        border-radius: 3px !important; 
+    }
+  }
 }
