@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { MapsPage } from '../pages/maps/maps';
 import { LoginPage } from '../pages/login/login';
 
+
 @Component({
   templateUrl: 'app.html'
 })

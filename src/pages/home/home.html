@@ -13,7 +13,7 @@
       <ion-card-header>
         {{user.nome}}
       </ion-card-header>
-      <ion-card-content>
+      <ion-card-content (click)="irParaExames(user.id)">
         {{user.cartaoSus}}
       </ion-card-content>
     </div>

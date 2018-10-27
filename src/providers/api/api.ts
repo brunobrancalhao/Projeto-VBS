@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { ToastController } from 'ionic-angular';
 import { StorageService } from '../storage.service/storage.service';
 import { PromiseObservable } from 'rxjs/observable/PromiseObservable';
 
@@ -14,17 +15,18 @@ import { PromiseObservable } from 'rxjs/observable/PromiseObservable';
 export class ApiProvider {
   private url = 'https://www.franca.sp.gov.br/api/rest/saude/paciente/seleciona/cns/';
 
-  constructor(public http: Http,    private localStorage: StorageService,) {
+  constructor(public http: Http,    private localStorage: StorageService, private toast: ToastController) {
     console.log('Hello ApiProvider Provider');
   }
 
   getCardSUS(cns){
     return new Promise((resolve,reject)=>{
       this.http.get(this.url+cns).subscribe((result: any)=> {
-        if(result.json()){
+        console.log(result);
+        try{
           this.localStorage.setLocalUser2(result.json());
-        }else {
-          console.log("aq");
+        }catch{
+          this.toast.create({message:'Cartão do SUS não encontrado', position: 'botton', duration: 30000});
         }
         
       },
@@ -32,6 +34,23 @@ export class ApiProvider {
         reject(error.json());
       });
     });
+  }
+
+  getExames(matricula_id){
+   return new Promise((resolve,reject) => {
+    let url = 'https://www.franca.sp.gov.br/api/rest/saude/tipoexame/lista/';
+
+    this.http.get(url+matricula_id).subscribe((result: any) =>{
+      if(result.json()){
+        return resolve(result.json());
+      } else {
+        resolve();
+      }
+    },
+    (error) =>{
+      reject(error);
+    });
+   }); 
   }
 
 }

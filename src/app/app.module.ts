@@ -9,6 +9,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { MapsPage } from '../pages/maps/maps';
+import { TiposExamesPage } from '../pages/tipos-exames/tipos-exames'
 import { Geolocation } from '@ionic-native/geolocation';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -38,7 +39,8 @@ export function authHttpServiceFactory(auth: AuthServiceProvider, http: Http, op
     HomePage,
     ListPage,
     MapsPage,
-    LoginPage
+    LoginPage,
+    TiposExamesPage
   ],
   imports: [
     BrowserModule,  
@@ -55,7 +57,8 @@ export function authHttpServiceFactory(auth: AuthServiceProvider, http: Http, op
     HomePage,
     ListPage,
     MapsPage,
-    LoginPage
+    LoginPage,
+    TiposExamesPage
   ],
   providers: [
     StatusBar,

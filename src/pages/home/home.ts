@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { ApiProvider } from './../../providers/api/api';
+import { TiposExamesPage } from '../tipos-exames/tipos-exames'
 
 @Component({
   selector: 'page-home',
@@ -61,6 +62,12 @@ export class HomePage {
       cssClass: 'alert-list'
     });
     prompt.present();
+  }
+  
+  irParaExames(matricula : string){
+    this.navCtrl.push(TiposExamesPage,{
+      matricula_id : matricula
+    });
   }
 
 }
