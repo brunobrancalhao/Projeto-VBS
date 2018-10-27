@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule, IonicPageModule } from 'ionic-angular';
 import { HttpModule, RequestOptions, Http } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { TooltipsModule } from 'ionic-tooltips';
@@ -43,6 +43,7 @@ export function authHttpServiceFactory(auth: AuthServiceProvider, http: Http, op
   imports: [
     BrowserModule,  
     IonicModule.forRoot(MyApp),
+    IonicPageModule.forChild(MyApp),
     HttpModule,
     IonicStorageModule.forRoot(),
     DirectivesModule,
@@ -67,6 +68,9 @@ export function authHttpServiceFactory(auth: AuthServiceProvider, http: Http, op
     AuthServiceProvider,
     HttpModule,
     StorageService,
+  ],
+  exports: [
+    MyApp
   ]
 })
 export class AppModule {}

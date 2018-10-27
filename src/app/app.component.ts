@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StorageService } from '../providers/storage.service/storage.service';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+// import { ListPage } from '../pages/list/list';
 import { MapsPage } from '../pages/maps/maps';
 import { LoginPage } from '../pages/login/login';
 
@@ -17,24 +17,21 @@ export class MyApp {
 
   rootPage: any = LoginPage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,private localStorage: StorageService) {
+  openMenu = false;
+
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private localStorage: StorageService) {
     this.initializeApp();
 
     let paciente = this.localStorage.getLocalUser();
     console.log(paciente);
     // used for an example of ngFor and navigation
-    if(paciente){
+    if (paciente) {
       this.rootPage = HomePage;
     } else {
       this.rootPage = LoginPage;
     }
-    this.pages = [
-      { title: 'Pacientes', component: HomePage },
-      { title: 'Laboratórios', component: MapsPage }
-    ];
-
   }
 
   initializeApp() {
@@ -50,5 +47,29 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  togglePopupMenu() {
+    return this.openMenu = !this.openMenu;
+  }
+
+  goToPacient() {
+    alert('Pacientes');
+    this.togglePopupMenu();
+  }
+
+  goToLab() {
+    alert('Laboratórios');
+    this.togglePopupMenu();
+  }
+
+  goToExam() {
+    alert('Tipos de exame');
+    this.togglePopupMenu();
+  }
+
+  goToAbout() {
+    alert('Sobre');
+    this.togglePopupMenu();
   }
 }
