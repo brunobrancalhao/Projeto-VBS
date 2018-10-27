@@ -1,59 +1,52 @@
-import {
-  GoogleMaps,
-  GoogleMap,
-  GoogleMapsEvent,
-  GoogleMapOptions,
-  CameraPosition,
-  MarkerOptions,
-  Marker,
-  Environment
-} from '@ionic-native/google-maps';
-import { Component } from "@angular/core/";
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { IonicPage } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
+declare var google;
+
+@IonicPage()
 @Component({
   selector: 'page-maps',
   templateUrl: 'maps.html'
 })
 export class MapsPage {
-  map: GoogleMap;
-  constructor() { }
 
-  ionViewDidLoad() {
-    this.loadMap();
+  @ViewChild('map') mapElement: ElementRef;
+  map: any;
+  start = 'chicago, il';
+  end = 'chicago, il';
+  directionsService = new google.maps.DirectionsService;
+  directionsDisplay = new google.maps.DirectionsRenderer;
+
+  constructor(public navCtrl: NavController) {
+
   }
 
-  loadMap() {
+  ionViewDidLoad(){
+    this.initMap();
+  }
 
-    // This code is necessary for browser
-    Environment.setEnv({
-      'API_KEY_FOR_BROWSER_RELEASE': '(your api key for `https://`)',
-      'API_KEY_FOR_BROWSER_DEBUG': '(your api key for `http://`)'
+  initMap() {
+    this.map = new google.maps.Map(this.mapElement.nativeElement, {
+      zoom: 7,
+      center: {lat: 41.85, lng: -87.65}
     });
 
-    let mapOptions: GoogleMapOptions = {
-      camera: {
-         target: {
-           lat: 43.0741904,
-           lng: -89.3809802
-         },
-         zoom: 18,
-         tilt: 30
-       }
-    };
+    this.directionsDisplay.setMap(this.map);
+  }
 
-    this.map = GoogleMaps.create('map_canvas', mapOptions);
-
-    let marker: Marker = this.map.addMarkerSync({
-      title: 'Ionic',
-      icon: 'blue',
-      animation: 'DROP',
-      position: {
-        lat: 43.0741904,
-        lng: -89.3809802
+  calculateAndDisplayRoute() {
+    this.directionsService.route({
+      origin: this.start,
+      destination: this.end,
+      travelMode: 'DRIVING'
+    }, (response, status) => {
+      if (status === 'OK') {
+        this.directionsDisplay.setDirections(response);
+      } else {
+        window.alert('Directions request failed due to ' + status);
       }
     });
-    marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-      alert('clicked');
-    });
   }
+
 }
