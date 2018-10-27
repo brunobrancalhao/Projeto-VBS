@@ -44,11 +44,25 @@ export class MapsPage {
     this.directionsDisplay.setMap(this.map);
   }
   addMarker(map:any){
-
-    let marker = new google.maps.Marker({
+    var image = 'https://png.icons8.com/color/30/000000/test-tube.png';
+    var marker = new google.maps.Marker({
       map: map,
       animation: google.maps.Animation.DROP,
-      position: map.getCenter()
+      position: new google.maps.LatLng(-20.53524503, -47.39349084),
+      title: 'Laboratório 1',
+      icon: image
+    });
+    var infoWindow = new google.maps.InfoWindow({
+      content: 'Laboratório X'
+    });
+    marker.addListener('click', function() {
+      infoWindow.open(map, marker);
+    });
+    new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: new google.maps.LatLng(-20.53367768, -47.38117414),
+      
     });
   }
 }
