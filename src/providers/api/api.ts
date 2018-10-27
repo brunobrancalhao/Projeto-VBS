@@ -21,7 +21,11 @@ export class ApiProvider {
   getCardSUS(cns){
     return new Promise((resolve,reject)=>{
       this.http.get(this.url+cns).subscribe((result: any)=> {
-        this.localStorage.setLocalUser2(result.json());
+        if(result.json()){
+          this.localStorage.setLocalUser2(result.json());
+        }else {
+          console.log("aq");
+        }
         
       },
       (error) => {

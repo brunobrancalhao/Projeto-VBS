@@ -13,8 +13,14 @@ export class HomePage {
 
   }
 
-  ionViewDidEnter(){
+   delay (ms: number) {
+    return new Promise<void>(function(resolve) {
+        setTimeout(resolve, ms);
+    });
+}
+  async ionViewDidEnter(){
     this.users = [];
+    await this.delay(1000);
     this.getUsers();
   }
   getUsers(){
@@ -46,6 +52,7 @@ export class HomePage {
             text: 'Adicionar',
             handler: data => {
               this.ApiProvider.getCardSUS(data['nlCard']);
+              this.ionViewDidEnter();
             }
           }
         ],
