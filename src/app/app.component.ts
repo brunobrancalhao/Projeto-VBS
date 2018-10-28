@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 // import { ListPage } from '../pages/list/list';
 import { MapsPage } from '../pages/maps/maps';
 import { LoginPage } from '../pages/login/login';
+import { DescricaoExamesPage } from '../pages/descricao-exames/descricao-exames';
 
 
 @Component({
@@ -57,7 +58,7 @@ export class MyApp {
   }
 
   goToExam() {
-    alert('Tipos de exame');
+    this.nav.setRoot(DescricaoExamesPage);
     this.togglePopupMenu();
   }
 
