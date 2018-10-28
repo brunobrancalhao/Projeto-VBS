@@ -203,7 +203,7 @@ export class MapsPage {
     });
     marker10.addListener('click', function () {
       var infoWindow = 'Hormolab',
-      telefone = '(16) 3700-0000'
+      telefone = '(16) 3409-9212'
       this.confirmar(infoWindow, telefone);
     }.bind(this));
 
@@ -216,7 +216,7 @@ export class MapsPage {
     });
     marker11.addListener('click', function () {
       var infoWindow = 'Hormolab',
-      telefone = '(16) 3700-0000'
+      telefone = '(16) 3409-9212'
       this.confirmar(infoWindow, telefone);
     }.bind(this));
 
@@ -229,7 +229,7 @@ export class MapsPage {
     });
     marker12.addListener('click', function () {
       var infoWindow = 'Hormolab',
-      telefone = '(16) 3700-0000'
+      telefone = '(16) 3409-9212'
       this.confirmar(infoWindow, telefone);
     }.bind(this));
 
@@ -242,7 +242,7 @@ export class MapsPage {
     });
     marker13.addListener('click', function () {
       var infoWindow = 'Hormolab',
-      telefone = '(16) 3700-0000'
+      telefone = '(16) 3409-9212'
       this.confirmar(infoWindow, telefone);
     }.bind(this));
 
@@ -255,7 +255,7 @@ export class MapsPage {
     });
     marker14.addListener('click', function () {
       var infoWindow = 'Hormolab',
-      telefone = '(16) 3700-0000'
+      telefone = '(16) 3409-9212'
       this.confirmar(infoWindow, telefone);
     }.bind(this));
   }
