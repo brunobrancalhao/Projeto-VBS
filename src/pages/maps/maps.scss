@@ -1,18 +1,91 @@
 page-maps {
-    #floating-panel {
-        position: absolute;
-        top: 10px;
-        right: 5px;
-        z-index: 5;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
+  #floating-panel {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto', 'sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+  }
+
+  #map {
+    height: 100%;
+  }
+}
+
+.alert-map {
+  background: rgba(0, 0, 0, .5);
+  font-family: 'Ubuntu', sans-serif;
+
+  .alert-wrapper {
+    border-radius: 20px;
+
+    .alert-head {
+      padding: 0;
+      text-align: center;
+    }
+
+    .alert-title {
+      padding: 10px 0;
+      color: #FFFFFF;
+      font-size: 14px;
+      background: #0F4098;
+    }
+
+    .alert-sub-title {
+      margin: 10px 0;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .alert-message {
+      color: #575757;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .alert-input-group {
+      max-width: 80%;
+      margin: 0 auto 20px;
+      padding: 0;
+
+
+      input {
+        color: #575757;
         text-align: center;
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
+        border: 0;
+        border-bottom: 1px #0F4098 solid;
+        border-radius: 0;
       }
-      #map {
-        height: 100%;
+    }
+
+    .alert-button-group {
+      padding: 0;
+
+      .alert-button {
+        display: inline-block;
+        width: 50%;
+        margin: 0;
+        color: #575757;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+        border: 0;
+
+        &:nth-child(2) {
+          color: #2B67BD;
+        }
+
+        .button-inner {
+          justify-content: center;
+        }
       }
+    }
+  }
 }
