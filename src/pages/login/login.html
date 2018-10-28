@@ -6,13 +6,11 @@
   <form #form="ngForm" class="formulario" novalidate>
     <ion-item-group>
       <ion-item>
-        <ion-label color="primary">*CPF</ion-label>
-        <ion-input [(ngModel)]="usuario.email" name="email" [limit-to]='11' #email="ngModel" placeholder="Digite apenas numeros" clearInput required></ion-input>
+        <ion-input [(ngModel)]="usuario.email" name="email" [limit-to]='11' #email="ngModel" placeholder="Digite o CPF" clearInput required></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label color="primary">*Senha</ion-label>
-        <ion-input [(ngModel)]="usuario.senha" name="senha" type="password" #senha="ngModel" title='Permissions "Disk"' clearInput required></ion-input>
+        <ion-input [(ngModel)]="usuario.senha" name="senha" type="password" #senha="ngModel" title='Permissions "Disk"' placeholder="Digite a senha"clearInput required></ion-input>
       </ion-item>
     </ion-item-group>
 

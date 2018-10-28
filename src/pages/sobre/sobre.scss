@@ -54,14 +54,22 @@ page-sobre {
 
               &:nth-child(2),
               &:nth-child(3) {
-                  background: #cccccc;
+                background: #cccccc;
               }
+
               &:nth-child(4),
               &:nth-child(5) {
-                  background: #bfbfbf;
+                background: #bfbfbf;
               }
 
+              @media screen and (max-width: 414px) {
 
+                &:nth-child(2),
+                &:nth-child(4) {
+                  padding: 10px;
+                }
+
+              }
 
               span {
                 display: block;
