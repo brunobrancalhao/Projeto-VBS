@@ -1,12 +1,49 @@
 page-lista-exames {
-    .back-button {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-      }
-    
-      ion-card {
-        background: #000000;
-      }
+  .back-button {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
 
+  ion-card {
+    background: #000000;
+  }
+
+  .scroll-content {
+    .card {
+      min-height: 136px;
+      border: 1px solid #ccc;
+      padding: 5px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 8px 7px 8px 0px #888888;
+
+      .content {
+        .card-header,
+        .card-content,
+        p {
+          color: #000;
+        }
+
+        p{
+          padding: 0 0 10px 0;
+        }
+      }
+      &:nth-child(1) > div > ion-card-content > p:nth-child(2),
+      &:nth-child(3) > div > ion-card-content > p,
+      &:nth-child(4) > div > ion-card-content > p {
+        padding: 0 0 10px 0;
+        span {
+          color: #008000;
+        }
+      }
+      &:nth-child(2) > div > ion-card-content > p,
+      &:nth-child(5) > div > ion-card-content > p {
+        padding: 0 0 10px 0;
+        span {
+          color: red;
+        }
+      }
+    }
+  }
 }
