@@ -53,4 +53,21 @@ export class ApiProvider {
    }); 
   }
 
+  getListaExames(tipo_id, matricula_id){
+    return new Promise((resolve,reject) => {
+      let url = 'https://www.franca.sp.gov.br/api/rest/saude/exame/solicitados/';
+  
+      this.http.get(url+matricula_id+ '/' +tipo_id).subscribe((result: any) =>{
+        if(result.json()){
+          return resolve(result.json());
+        } else {
+          resolve();
+        }
+      },
+      (error) =>{
+        reject(error);
+      });
+     }); 
+  }
+
 }

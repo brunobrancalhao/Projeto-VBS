@@ -67,4 +67,10 @@ export class MyApp {
     this.nav.setRoot(SobrePage);
     this.togglePopupMenu();
   }
+
+  goToLogout(){
+    localStorage.removeItem('token');
+    this.nav.setRoot(LoginPage);
+    this.togglePopupMenu();
+  }
 }

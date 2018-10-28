@@ -15,13 +15,13 @@ export class StorageService {
       }
     
       setLocalUser(obj: LocalUser) {
-        console.log(obj);
         if (obj == null) {
           localStorage.removeItem(STORAGE_KEYS.localUser);      
         } else {
           localStorage.setItem(STORAGE_KEYS.localUser, JSON.stringify(obj));
         }
       }
+
 
       setLocalUser2(result){
         localStorage.setItem(result.id, JSON.stringify(result));
