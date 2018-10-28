@@ -8,16 +8,21 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngFor="let user of users">
-    <div class="content">
-      <ion-card-header>
-        {{user.nome}}
-      </ion-card-header>
-      <ion-card-content (click)="irParaExames(user.id)">
-        {{user.cartaoSus}}
-      </ion-card-content>
-    </div>
-  </ion-card>
+  <div class="card-wrapper" *ngFor="let user of users">
+    <ion-card (click)="irParaExames(user.id)">
+      <div class="content">
+        <ion-card-header>
+          {{user.nome}}
+        </ion-card-header>
+        <ion-card-content>
+          {{user.cartaoSus}}
+        </ion-card-content>
+      </div>
+    </ion-card>
+    <div (click)="deletaPaciente(user.id)" class="remove"><span class="text">E</span><span
+        class="text">X</span><span class="text">C</span><span class="text">L</span><span class="text">U</span><span
+        class="text">I</span><span class="text">R</span></div>
+  </div>
 
   <ion-fab right bottom>
     <button ion-fab mini (click)="addCardSUS()">

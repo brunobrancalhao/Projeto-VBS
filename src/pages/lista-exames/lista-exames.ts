@@ -24,7 +24,7 @@ export class ListaExamesPage {
     this.exames = [];
     var tipo_id = this.navParams.get('tipo_id');
     this.matricula = this.navParams.get('matricula');
-    this.getExames(this.matricula,tipo_id);
+    // this.getExames(this.matricula,tipo_id);
   }
 
   getExames(matricula,tipo_id){

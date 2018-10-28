@@ -8,17 +8,14 @@
 
   <ion-navbar>
     <div class="back-menu-item" (click)="goToPacient()">Voltar</div>
-    <ion-title>tiposExames</ion-title>
-    <button ion-button color="danger" (click)="deletaPaciente(matricula)">
-      <ion-icon name="close-circle"></ion-icon>
-    </button>
+    <ion-title>Tipos de Exames</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <div *ngIf="semExames">Nenhum Exame Encontrado</div>
+  <!-- <div *ngIf="semExames">Nenhum Exame Encontrado</div>
   <div *ngIf="!semExames">
     <ion-card *ngFor="let exam of exames">
       <div class="content">
@@ -29,6 +26,37 @@
         </ion-card-content>
       </div>
     </ion-card>
-  </div>
+  </div> -->
 
+  <!-- Fixo (inicio) -->
+  <div>
+    <ion-card>
+      <div class="content">
+        <ion-card-header>
+          nome
+        </ion-card-header>
+      </div>
+    </ion-card>
+    <ion-card>
+      <div class="content">
+        <ion-card-header>
+          nome
+        </ion-card-header>
+      </div>
+    </ion-card>
+    <ion-card>
+      <div class="content">
+        <ion-card-header>
+          nome
+        </ion-card-header>
+      </div>
+    </ion-card>
+    <ion-card>
+      <div class="content">
+        <ion-card-header>
+          nome
+        </ion-card-header>
+      </div>
+    </ion-card>
+  </div>
 </ion-content>

@@ -35,7 +35,7 @@ export class TiposExamesPage {
     var matricula_id = this.navParams.get('matricula_id');
     this.matricula = this.navParams.get('matricula_id');
     this.semExames = false;
-    this.getExames(matricula_id);
+    // this.getExames(matricula_id);
   }
 
   getExames(matricula_id) {
@@ -52,10 +52,6 @@ export class TiposExamesPage {
       }
     });
 
-  }
-  deletaPaciente(matricula) {
-    localStorage.removeItem(matricula);
-    this.nav.setRoot(HomePage);
   }
 
   irParaExamesDetalhes(matricula_id, tipo_id) {
