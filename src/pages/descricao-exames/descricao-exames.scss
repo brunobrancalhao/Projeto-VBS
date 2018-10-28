@@ -17,7 +17,8 @@ page-descricao-exames {
         .accordion-header {
           background-color: #0F4098;
           padding-left: 0 !important;
-          margin-bottom: 15px;
+          margin-bottom: 20px;
+          border-radius: 13px;
 
           .item-inner {
             .input-wrapper {
@@ -44,7 +45,7 @@ page-descricao-exames {
             border-left: 1px solid #cccc;
             border-right: 1px solid #cccc;
             border-bottom: 1px solid #cccc;
-            padding: 15px 10px 0;
+            padding: 20px 10px;
             text-align: justify;
           }
         }
@@ -53,6 +54,8 @@ page-descricao-exames {
       .label.active {
         .accordion-header {
           margin-bottom: 0;
+          border-radius: 13px 13px 0 0;
+          transition: all .5s ease;
 
           .item-inner {
             ion-icon {

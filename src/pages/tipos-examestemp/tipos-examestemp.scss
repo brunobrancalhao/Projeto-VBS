@@ -1,11 +1,21 @@
 page-tipos-examestemp {
-    .back-button {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-      }
-    
-      ion-card {
-        background: #000000;
-      }
+  .back-button {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+
+  ion-card {
+    background: #000000;
+  }
+
+  .scroll-content {
+    div {
+      border: 1px solid #ccc;
+      padding: 40px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 10px 10px 8px 10px #888888;
+    }
+  }
 }
