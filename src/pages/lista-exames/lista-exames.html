@@ -1,5 +1,5 @@
 <!--
-  Generated template for the TiposExamesPage page.
+  Generated template for the ListaExamesPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,22 +7,21 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>tiposExames</ion-title>
+    <ion-title>listaExames</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
     <ion-card *ngFor="let exam of exames">
         <div class="content">
           <ion-card-header>
-            {{exam.descricaoTipo}}
+            {{exam.nomeExame}}
           </ion-card-header>
-          <ion-card-content (click)="irParaExamesDetalhes(exam.codigoTipo, matricula)">
+          <ion-card-content>
+              {{exam.justificativa}}
           </ion-card-content>
         </div>
       </ion-card>
-
 </ion-content>
