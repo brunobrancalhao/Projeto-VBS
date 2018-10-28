@@ -29,7 +29,6 @@ export class HomePage {
   getUsers() {
     var users = [];
     for (var i = 0; i < localStorage.length; i++) {
-      if (localStorage.getItem(localStorage.key(i)).length > 0) {
         try {
           if (!!JSON.parse(localStorage.getItem(localStorage.key(i))).id) {
             this.users.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
@@ -37,7 +36,6 @@ export class HomePage {
         } catch (e) {
           console.log('Erro request localStorage: ', e);
         }
-      }
     }
   }
 
