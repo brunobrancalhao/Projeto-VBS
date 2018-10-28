@@ -14,12 +14,12 @@ export class HomePage {
 
   }
 
-   delay (ms: number) {
-    return new Promise<void>(function(resolve) {
-        setTimeout(resolve, ms);
+  delay(ms: number) {
+    return new Promise<void>(function (resolve) {
+      setTimeout(resolve, ms);
     });
-}
-  async ionViewDidEnter(){
+  }
+  async ionViewDidEnter() {
     this.users = [];
     await this.delay(1000);
     this.getUsers();
@@ -28,45 +28,49 @@ export class HomePage {
     var users = [];
     for (var i = 0; i < localStorage.length; i++) {
       if (localStorage.getItem(localStorage.key(i)).length > 0) {
-        if (localStorage.key(i) != 'token' && localStorage.key(i) != 'ionic_lastdevices') {
-          this.users.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
+        try {
+          if (!!JSON.parse(localStorage.getItem(localStorage.key(i))).id) {
+            this.users.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
+          }
+        } catch (e) {
+          console.log('Erro request localStorage: ', e);
         }
       }
     }
   }
 
-    addCardSUS() {
-      const prompt = this.alertCtrl.create({
-        title: 'Adicionar cartão SUS',
-        message: "Entre com o cartão SUS do paciente",
-        inputs: [
-          {
-            name: 'nlCard',
-            placeholder: 'Número'
-          },
-        ],
-        buttons: [
-          {
-            text: 'Cancelar',
-            handler: data => {
-            }
-          },
-          {
-            text: 'Adicionar',
-            handler: data => {
-              this.ApiProvider.getCardSUS(data['nlCard']);
-              this.ionViewDidEnter();
-            }
+  addCardSUS() {
+    const prompt = this.alertCtrl.create({
+      title: 'Adicionar cartão SUS',
+      message: "Entre com o cartão SUS do paciente",
+      inputs: [
+        {
+          name: 'nlCard',
+          placeholder: 'Número'
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancelar',
+          handler: data => {
           }
+        },
+        {
+          text: 'Adicionar',
+          handler: data => {
+            this.ApiProvider.getCardSUS(data['nlCard']);
+            this.ionViewDidEnter();
+          }
+        }
       ],
       cssClass: 'alert-list'
     });
     prompt.present();
   }
-  
-  irParaExames(matricula : string){
-    this.navCtrl.push(TiposExamesPage,{
-      matricula_id : matricula
+
+  irParaExames(matricula: string) {
+    this.navCtrl.push(TiposExamesPage, {
+      matricula_id: matricula
     });
   }
 
