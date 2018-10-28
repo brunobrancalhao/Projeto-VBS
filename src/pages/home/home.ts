@@ -67,15 +67,9 @@ export class HomePage {
   }
   
   irParaExames(matricula : string){
-    this.ApiProvider.getExames(matricula).then((result: any)=>{
-      if(result.length > 1){
-        this.navCtrl.push(TiposExamesPage,{
-          matricula_id : matricula
-        });
-      } else {
-        this.toast.create({message:'Cartão do SUS não possui Exames', position: 'botton', duration: 3000});
-      }
-  });
+    this.navCtrl.push(TiposExamesPage,{
+      matricula_id : matricula
+    });
   }
 
 }
