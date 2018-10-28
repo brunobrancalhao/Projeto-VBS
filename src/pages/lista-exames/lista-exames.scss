@@ -1,3 +1,12 @@
 page-lista-exames {
+    .back-button {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+      }
+    
+      ion-card {
+        background: #000000;
+      }
 
 }

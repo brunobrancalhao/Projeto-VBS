@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Nav, IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ApiProvider } from './../../providers/api/api';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the ListaExamesPage page.
@@ -17,7 +18,7 @@ import { ApiProvider } from './../../providers/api/api';
 export class ListaExamesPage {
   exames: any[];
   matricula: string;
-  constructor(public navCtrl: NavController, public navParams: NavParams,public api : ApiProvider) {
+  constructor(public nav: Nav, public navCtrl: NavController, public navParams: NavParams,public api : ApiProvider) {
   }
 
   ionViewDidLoad() {
@@ -36,6 +37,10 @@ export class ListaExamesPage {
         }
       }
     });
+  }
+
+  goToPacient() {
+    this.nav.setRoot(HomePage);
   }
 
 }

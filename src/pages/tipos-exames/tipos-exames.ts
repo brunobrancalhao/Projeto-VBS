@@ -56,9 +56,11 @@ export class TiposExamesPage {
 
   irParaExamesDetalhes(matricula_id, tipo_id) {
     this.navCtrl.push(ListaExamesPage, {
-      tipo_id: tipo_id,
-      matricula: matricula_id
     });
+    // this.navCtrl.push(ListaExamesPage, {
+    //   tipo_id: tipo_id,
+    //   matricula: matricula_id
+    // });
   }
 
   goToPacient() {
