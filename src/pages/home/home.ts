@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController, ToastController } from 'ionic-angular';
+import { NavController, AlertController, ToastController,LoadingController } from 'ionic-angular';
 import { ApiProvider } from './../../providers/api/api';
 import { TiposExamesPage } from '../tipos-exames/tipos-exames'
 import { CATCH_ERROR_VAR } from '@angular/compiler/src/output/abstract_emitter';
@@ -12,8 +12,15 @@ import { CATCH_ERROR_VAR } from '@angular/compiler/src/output/abstract_emitter';
 export class HomePage {
   users: any[];
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public ApiProvider: ApiProvider,private toast: ToastController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController,public loadingCtrl: LoadingController, public ApiProvider: ApiProvider,private toast: ToastController) {
 
+  }
+  presentLoadig(){
+    const loader = this.loadingCtrl.create({
+      content: "Carregando...",
+      duration: 1000
+    });
+    loader.present();
   }
 
   delay(ms: number) {
@@ -22,6 +29,7 @@ export class HomePage {
     });
   }
   async ionViewDidEnter() {
+    this.presentLoadig();
     this.users = [];
     await this.delay(1000);
     this.getUsers();

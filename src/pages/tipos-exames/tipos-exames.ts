@@ -53,6 +53,11 @@ export class TiposExamesPage {
     });
 
   }
+  deletaPaciente(matricula){
+    localStorage.removeItem(matricula);
+    this.navCtrl.push(HomePage,{
+    });
+  }
 
   irParaExamesDetalhes(matricula_id,tipo_id){
       this.navCtrl.push(ListaExamesPage,{
