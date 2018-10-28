@@ -68,14 +68,14 @@ export class MapsPage {
 
   addMarker(map:any, latLng){
     var image = 'https://png.icons8.com/color/30/000000/test-tube.png';
-    var localAtual =  'https://png.icons8.com/color/30/B1D2E6/marker.png';
+    var localAtual =  'https://i.imgur.com/LeXfkus.png';
     var marker = new google.maps.Marker({
       map: map,
       animation: google.maps.Animation.DROP,
       position: latLng,
       icon: localAtual
     });
-
+ 
     var marker = new google.maps.Marker({
       map: map,
       animation: google.maps.Animation.DROP,
