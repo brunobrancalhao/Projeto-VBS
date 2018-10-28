@@ -14,7 +14,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'descricao-exames.html',
 })
 export class DescricaoExamesPage {
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -22,4 +21,8 @@ export class DescricaoExamesPage {
     console.log('ionViewDidLoad DescricaoExamesPage');
   }
 
+  updateClass(value){
+    var element = document.getElementById(value);
+    element.classList.toggle("active");
+  }
 }

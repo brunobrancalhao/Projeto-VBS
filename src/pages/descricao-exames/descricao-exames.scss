@@ -1,3 +1,74 @@
-page-descricao-exames {
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
 
+  to {
+    opacity: 1;
+  }
+}
+
+page-descricao-exames {
+  .content {
+    .scroll-content {
+      .label {
+        margin: 0 !important;
+
+        .accordion-header {
+          background-color: #0F4098;
+          padding-left: 0 !important;
+          margin-bottom: 15px;
+
+          .item-inner {
+            .input-wrapper {
+              p {
+                color: #fff;
+                padding: 15px;
+              }
+            }
+
+            ion-icon {
+              color: #fff;
+              transition: all .5s ease;
+            }
+          }
+        }
+
+        .accordion-content {
+          height: 0;
+          animation-duration: 3s;
+          animation-name: slidein;
+
+          p {
+            margin-top: 0 !important;
+            border-left: 1px solid #cccc;
+            border-right: 1px solid #cccc;
+            border-bottom: 1px solid #cccc;
+            padding: 15px 10px 0;
+            text-align: justify;
+          }
+        }
+      }
+
+      .label.active {
+        .accordion-header {
+          margin-bottom: 0;
+
+          .item-inner {
+            ion-icon {
+              color: #fff;
+              transform: rotate(90deg);
+              transition: all .5s ease;
+            }
+          }
+        }
+
+        .accordion-content {
+          height: auto;
+          animation-duration: 3s;
+          animation-name: slidein;
+        }
+      }
+    }
+  }
 }

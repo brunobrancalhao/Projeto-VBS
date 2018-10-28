@@ -14,31 +14,77 @@
 
 
 <ion-content padding>
-  <ion-label class="label label-md">
+  <ion-label (click)="updateClass('exam1')" id="exam1" class="label label-md">
     <button class="accordion-header item item-block item-md" detail-none ion-item>
-        <ion-icon item-left="" name="ios-arrow-forward" role="img" class="icon icon-md ion-ios-arrow-forward item-icon" aria-label="arrow forward">
-        </ion-icon>
-            <ion-label class="label label-md">
-              Tomografia do Crânio
-            </ion-label>
-        <div class="button-effect"></div>
+      <p class="label label-md">
+        Tomografia do Crânio
+      </p>
+      <ion-icon item-right="" name="ios-arrow-forward" role="img" class="icon icon-md ion-ios-arrow-forward item-icon"
+        aria-label="arrow forward"></ion-icon>
     </button>
     <section class="accordion-content">
-        <p text-wrap="">Consiste no método de diagnóstico por imagem que através de cortes axiais proporciona estudo detalhado de diferentes estruturas do corpo humano, facilita a localização, detecta alterações muito pequenas em ossos, tecidos, órgãos e outras estruturas do corpo e proporciona maior precisão nas intervenções clínicas e cirúrgicas. Inclui o estudo da região mastoidea.</p>
+      <p text-wrap="">Consiste no método de diagnóstico por imagem que através de cortes axiais proporciona estudo
+        detalhado de diferentes estruturas do corpo humano, facilita a localização, detecta alterações muito pequenas
+        em ossos, tecidos, órgãos e outras estruturas do corpo e proporciona maior precisão nas intervenções clínicas e
+        cirúrgicas. Inclui o estudo da região mastoidea.</p>
     </section>
   </ion-label>
 
-  <ion-label class="label label-md">
-      <button class="accordion-header item item-block item-md" detail-none ion-item>
-          <ion-icon item-left="" name="ios-arrow-forward" role="img" class="icon icon-md ion-ios-arrow-forward item-icon" aria-label="arrow forward">
-          </ion-icon>
-              <ion-label class="label label-md">
-                Colonocospia
-              </ion-label>
-          <div class="button-effect" ></div>
-      </button>
-      <section class="accordion-content" >
-          <p text-wrap="">Consiste no exame endoscopio destinado a examinar o colon. Permite também realizar várias intervenções terapeuticas: obtenção de fragementos de tecidos para análise (biópsia), extração ou exerese de polipo, detruição de dilatação vascular, dilatação de estenoses, entre outras.</p>
-      </section>
-    </ion-label>
+  <ion-label (click)="updateClass('exam2')" id="exam2" class="label label-md" [ngClass]="{ 'enabled': isSelected, 'disabled': !isSelected }">
+    <button class="accordion-header item item-block item-md" detail-none ion-item>
+      <p class="label label-md">
+        Colonocospia
+      </p>
+      <ion-icon item-right="" name="ios-arrow-forward" role="img" class="icon icon-md ion-ios-arrow-forward item-icon"
+        aria-label="arrow forward"></ion-icon>
+    </button>
+    <section class="accordion-content">
+      <p text-wrap="">Consiste no exame endoscopio destinado a examinar o colon. Permite também realizar várias
+        intervenções terapeuticas: obtenção de fragementos de tecidos para análise (biópsia), extração ou exerese de
+        polipo, detruição de dilatação vascular, dilatação de estenoses, entre outras.</p>
+    </section>
+  </ion-label>
+
+  <ion-label (click)="updateClass('exam3')" id="exam3" class="label label-md" [ngClass]="{ 'enabled': isSelected, 'disabled': !isSelected }">
+    <button class="accordion-header item item-block item-md" detail-none ion-item>
+      <p class="label label-md">
+        Ressonância coluna torácica
+      </p>
+      <ion-icon item-right="" name="ios-arrow-forward" role="img" class="icon icon-md ion-ios-arrow-forward item-icon"
+        aria-label="arrow forward"></ion-icon>
+    </button>
+    <section class="accordion-content">
+      <p text-wrap="">Consiste no exame para diagnóstico que retrata imagens de alta definição dos órgãos de qualquer
+        parte do interior do corpo humano, através da utilização de forte campo magnético e ondas de radio frequencia.
+        não utiliza radiação. corresponde ao estudo da região torácica.</p>
+    </section>
+  </ion-label>
+
+  <ion-label (click)="updateClass('exam4')" id="exam4" class="label label-md" [ngClass]="{ 'enabled': isSelected, 'disabled': !isSelected }">
+    <button class="accordion-header item item-block item-md" detail-none ion-item>
+      <p class="label label-md">
+        Clearance de Ureia
+      </p>
+      <ion-icon item-right="" name="ios-arrow-forward" role="img" class="icon icon-md ion-ios-arrow-forward item-icon"
+        aria-label="arrow forward"></ion-icon>
+    </button>
+    <section class="accordion-content">
+      <p text-wrap="">Consiste no exame para diagnóstico que retrata imagens de alta definição dos órgãos de qualquer
+        parte do interior do corpo humano, através da utilização de forte campo magnético e ondas de radio frequencia.
+        não utiliza radiação. corresponde ao estudo da região torácica.</p>
+    </section>
+  </ion-label>
+
+  <ion-label (click)="updateClass('exam5')" id="exam5" class="label label-md" [ngClass]="{ 'enabled': isSelected, 'disabled': !isSelected }">
+    <button class="accordion-header item item-block item-md" detail-none ion-item>
+      <p class="label label-md">
+          Exame Citopatologico de Mama
+      </p>
+      <ion-icon item-right="" name="ios-arrow-forward" role="img" class="icon icon-md ion-ios-arrow-forward item-icon"
+        aria-label="arrow forward"></ion-icon>
+    </button>
+    <section class="accordion-content">
+      <p text-wrap="">Consiste no exame citopatologico de material de descarga papilar ou obtido por punção de nódulo mamário, esta realizada por aspiração através de seringa acoplada a agulha fina.</p>
+    </section>
+  </ion-label>
 </ion-content>
