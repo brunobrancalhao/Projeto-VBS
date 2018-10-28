@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, ToastController,LoadingController } from 'ionic-angular';
 import { ApiProvider } from './../../providers/api/api';
-import { TiposExamesPage } from '../tipos-exames/tipos-exames'
+import { TiposExamesPage } from '../tipos-exames/tipos-exames';
 import { CATCH_ERROR_VAR } from '@angular/compiler/src/output/abstract_emitter';
 
 
@@ -18,7 +18,7 @@ export class HomePage {
   presentLoadig(){
     const loader = this.loadingCtrl.create({
       content: "Carregando...",
-      duration: 1000
+      duration: 400
     });
     loader.present();
   }
@@ -31,7 +31,7 @@ export class HomePage {
   async ionViewDidEnter() {
     this.presentLoadig();
     this.users = [];
-    await this.delay(1000);
+    await this.delay(800);
     this.getUsers();
   }
   getUsers() {
