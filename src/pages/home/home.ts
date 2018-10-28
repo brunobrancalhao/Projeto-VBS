@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, ToastController } from 'ionic-angular';
 import { ApiProvider } from './../../providers/api/api';
 import { TiposExamesPage } from '../tipos-exames/tipos-exames'
+import { CATCH_ERROR_VAR } from '@angular/compiler/src/output/abstract_emitter';
+
 
 @Component({
   selector: 'page-home',
@@ -10,7 +12,7 @@ import { TiposExamesPage } from '../tipos-exames/tipos-exames'
 export class HomePage {
   users: any[];
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public ApiProvider: ApiProvider) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public ApiProvider: ApiProvider,private toast: ToastController) {
 
   }
 

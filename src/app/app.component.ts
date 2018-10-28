@@ -65,4 +65,10 @@ export class MyApp {
     alert('Sobre');
     this.togglePopupMenu();
   }
+
+  goToLogout(){
+    localStorage.removeItem('token');
+    this.nav.setRoot(LoginPage);
+    this.togglePopupMenu();
+  }
 }
