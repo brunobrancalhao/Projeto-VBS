@@ -11,17 +11,33 @@ page-tipos-exames {
 
   .scroll-content {
     .card {
-      border: 1px solid #ccc;
       padding: 15px;
       text-align: center;
       border-radius: 7px;
       margin: 25px 0 10px 10px;
       box-shadow: 8px 7px 8px -3px #888888;
+      background: #2B67BD;
 
       .content {
+        position: relative;
         .card-header {
+          display: inline-block;
+          vertical-align: middle;
           padding: 0 !important;
-          color: #000000;
+          color: #ffffff;
+
+          
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          display: inline-block;
+          vertical-align: middle;
+          width: 15px;
+          height: 15px;
+          background: url('../../assets/imgs/lista-exames/ico-item.svg') center no-repeat;
+          background-size: 100%;
         }
       }
     }

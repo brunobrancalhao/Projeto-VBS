@@ -11,37 +11,65 @@ page-lista-exames {
 
   .scroll-content {
     .card {
+      margin: 20px auto;
       min-height: 136px;
-      border: 1px solid #ccc;
-      padding: 5px;
-      text-align: center;
-      border-radius: 15px;
       box-shadow: 8px 7px 8px 0px #888888;
+      border-radius: 15px;
+      background: #eaeaea;
 
       .content {
+        text-align: center;
+
         .card-header,
         .card-content,
         p {
           color: #000;
         }
 
-        p{
+        .card-header {
+          padding: 10px 5px;
+          color: #FFFFFF;
+          font-size: 14px;
+          background: #2B67BD;
+          text-align: center;
+          border-radius: 15px 15px 0 0;
+        }
+
+        .card-content {
+          margin-top: 10px;
+        }
+
+        p {
           padding: 0 0 10px 0;
         }
-      }
-      &:nth-child(1) > div > ion-card-content > p:nth-child(2),
-      &:nth-child(3) > div > ion-card-content > p,
-      &:nth-child(4) > div > ion-card-content > p {
-        padding: 0 0 10px 0;
-        span {
-          color: #008000;
+
+        a {
+          display: block;
+          margin-top: 10px;
+          padding: 8px 20px;
+          background: #2B67BD;
+          color: #FFFFFF;
+          text-decoration: none;
+          border-radius: 10px;
         }
       }
-      &:nth-child(2) > div > ion-card-content > p,
-      &:nth-child(5) > div > ion-card-content > p {
+
+      &:nth-child(1)>div>ion-card-content>p:nth-child(2),
+      &:nth-child(3)>div>ion-card-content>p,
+      &:nth-child(4)>div>ion-card-content>p {
         padding: 0 0 10px 0;
+
         span {
-          color: red;
+          color: #065d06;
+        }
+      }
+
+      &:nth-child(2)>div>ion-card-content>p,
+      &:nth-child(5)>div>ion-card-content>p {
+        padding: 0 0 10px 0;
+
+        span {
+          color: #a00c0c;
         }
       }
     }
