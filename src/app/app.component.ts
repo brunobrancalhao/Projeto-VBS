@@ -9,7 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { MapsPage } from '../pages/maps/maps';
 import { LoginPage } from '../pages/login/login';
 import { DescricaoExamesPage } from '../pages/descricao-exames/descricao-exames';
-
+import { SobrePage } from '../pages/sobre/sobre';
 
 @Component({
   templateUrl: 'app.html'
@@ -63,7 +63,13 @@ export class MyApp {
   }
 
   goToAbout() {
-    alert('Sobre');
+    this.nav.setRoot(SobrePage);
+    this.togglePopupMenu();
+  }
+
+  goToLogout(){
+    localStorage.removeItem('token');
+    this.nav.setRoot(LoginPage);
     this.togglePopupMenu();
   }
 }

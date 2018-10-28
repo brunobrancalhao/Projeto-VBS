@@ -19,6 +19,7 @@ import { HomePage } from '../home/home'
 export class TiposExamesPage {
   exames: any[];
   matricula: string;
+  semExames: boolean;
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public api : ApiProvider, private toast: ToastController) {
   }
   presentLoadig(){
@@ -33,16 +34,21 @@ export class TiposExamesPage {
     this.exames = [];
     var matricula_id = this.navParams.get('matricula_id');
     this.matricula = this.navParams.get('matricula_id');
+    this.semExames = false;
     this.getExames(matricula_id);
   }
 
   getExames(matricula_id){
     this.presentLoadig();
     this.api.getExames(matricula_id).then((result: any)=>{
-      for (var i = 0; i < result.length; i++) {
-        if(result[i].descricaoTipo != '<Todos>' && result[i].descricaoTipo != null){
-          this.exames.push(result[i]);
+      if(result.length > 1){
+        for (var i = 0; i < result.length; i++) {
+          if(result[i].descricaoTipo != '<Todos>' && result[i].descricaoTipo != null){
+            this.exames.push(result[i]);
+          }
         }
+      } else {
+        this.semExames = true;
       }
     });
 

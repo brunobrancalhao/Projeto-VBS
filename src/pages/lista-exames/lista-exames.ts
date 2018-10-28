@@ -29,9 +29,9 @@ export class ListaExamesPage {
 
   getExames(matricula,tipo_id){
     this.api.getListaExames(matricula,tipo_id).then((result: any)=>{
-      console.log(result);
       if(result.length > 0){
         for (var i = 0; i < result.length; i++) {
+          console.log(result);
           this.exames.push(result[i]);
         }
       }

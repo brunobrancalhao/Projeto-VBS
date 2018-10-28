@@ -14,15 +14,17 @@
 
 
 <ion-content padding>
-
-    <ion-card *ngFor="let exam of exames">
-        <div class="content">
-          <ion-card-header>
-            {{exam.descricaoTipo}}
-          </ion-card-header>
-          <ion-card-content (click)="irParaExamesDetalhes(exam.codigoTipo, matricula)">
-          </ion-card-content>
-        </div>
-      </ion-card>
+    <div *ngIf="semExames">Nenhum Exame Encontrado</div>
+    <div *ngIf="!semExames">
+      <ion-card *ngFor="let exam of exames">
+          <div class="content">
+            <ion-card-header>
+              {{exam.descricaoTipo}}
+            </ion-card-header>
+            <ion-card-content (click)="irParaExamesDetalhes(exam.codigoTipo, matricula)">
+            </ion-card-content>
+          </div>
+        </ion-card>
+    </div>
 
 </ion-content>
