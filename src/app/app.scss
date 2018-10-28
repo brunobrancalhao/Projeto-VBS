@@ -4,6 +4,10 @@
   font-size: 2.5em;
 }
 
+ion-title {
+  text-transform: uppercase;
+}
+
 .popup-menu-overlay {
   position: fixed;
   top: 0px;
@@ -58,7 +62,7 @@
   -webkit-transform: scale(1);
   transform: scale(1);
   background: url('../assets/imgs/menu/ico-menu.svg') center no-repeat;
-        background-size: 20px;
+  background-size: 20px;
 }
 
 .popup-menu-toggle.out {
@@ -145,38 +149,41 @@
 }
 
 .popup-menu-panel .popup-menu-item {
-    .ico-pacient {
-        display: block;
-        width: 35px;
-        height: 30px;
-        margin: 0 auto 6px;
-        background: url('../assets/imgs/menu/ico-pacient.svg') center no-repeat;
-        background-size: 100%;
-    }
-    .ico-lab {
-        display: block;
-        width: 30px;
-        height: 30px;
-        margin: 0 auto 8px;
-        background: url('../assets/imgs/menu/ico-lab.svg') center no-repeat;
-        background-size: 100%;
-    }
-    .ico-exam {
-        display: block;
-        width: 30px;
-        height: 30px;
-        margin: 0 auto 6px;
-        background: url('../assets/imgs/menu/ico-exam.svg') center no-repeat;
-        background-size: 100%;
-    }
-    .ico-about {
-        display: block;
-        width: 32px;
-        height: 32px;
-        margin: 0 auto 6px;
-        background: url('../assets/imgs/menu/ico-about.svg') center no-repeat;
-        background-size: 100%;
-    }
+  .ico-pacient {
+    display: block;
+    width: 35px;
+    height: 30px;
+    margin: 0 auto 6px;
+    background: url('../assets/imgs/menu/ico-pacient.svg') center no-repeat;
+    background-size: 100%;
+  }
+
+  .ico-lab {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 8px;
+    background: url('../assets/imgs/menu/ico-lab.svg') center no-repeat;
+    background-size: 100%;
+  }
+
+  .ico-exam {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 6px;
+    background: url('../assets/imgs/menu/ico-exam.svg') center no-repeat;
+    background-size: 100%;
+  }
+
+  .ico-about {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 6px;
+    background: url('../assets/imgs/menu/ico-about.svg') center no-repeat;
+    background-size: 100%;
+  }
 }
 
 .popup-menu-panel .popup-menu-item span {

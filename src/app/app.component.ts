@@ -8,6 +8,8 @@ import { HomePage } from '../pages/home/home';
 // import { ListPage } from '../pages/list/list';
 import { MapsPage } from '../pages/maps/maps';
 import { LoginPage } from '../pages/login/login';
+import { SobrePage } from '../pages/sobre/sobre';
+
 
 
 @Component({
@@ -62,7 +64,7 @@ export class MyApp {
   }
 
   goToAbout() {
-    alert('Sobre');
+    this.nav.setRoot(SobrePage);
     this.togglePopupMenu();
   }
 }

@@ -17,6 +17,7 @@ import { ApiProvider } from '../providers/api/api';
 
 //imports Logins
 import { LoginPage } from '../pages/login/login';
+import {SobrePage} from '../pages/sobre/sobre';
 import { GlobalServiceProvider } from '../providers/global-service/global-service';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { DirectivesModule } from '../directives/directives.module';
@@ -40,7 +41,8 @@ export function authHttpServiceFactory(auth: AuthServiceProvider, http: Http, op
     ListPage,
     MapsPage,
     LoginPage,
-    TiposExamesPage
+    TiposExamesPage,
+    SobrePage
   ],
   imports: [
     BrowserModule,  
@@ -58,7 +60,8 @@ export function authHttpServiceFactory(auth: AuthServiceProvider, http: Http, op
     ListPage,
     MapsPage,
     LoginPage,
-    TiposExamesPage
+    TiposExamesPage,
+    SobrePage
   ],
   providers: [
     StatusBar,
