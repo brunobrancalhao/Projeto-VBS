@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Nav, NavController, AlertController, ToastController, LoadingController } from 'ionic-angular';
 import { ApiProvider } from './../../providers/api/api';
 import { TiposExamesPage } from '../tipos-exames/tipos-exames';
+import { TiposExamestempPage } from '../tipos-examestemp/tipos-examestemp';
 import { CATCH_ERROR_VAR } from '@angular/compiler/src/output/abstract_emitter';
 
 
@@ -66,7 +67,8 @@ export class HomePage {
         {
           text: 'Adicionar',
           handler: data => {
-            this.ApiProvider.getCardSUS(data['nlCard']);
+            //this.ApiProvider.getCardSUS(data['nlCard']);
+            localStorage.setItem('439624', '{\"id\":439624,\"nome\":\"LUIS HENRIQUE VIEIRA GUIRALDELLI\",\"cartaoSus\":\"703002878196170\",\"dataNascimento\":502509600000,\"rua\":{\"id\":688,\"nome\":\"RUA BELEM - FRANCA\"},\"bairro\":{\"id\":31,\"nome\":\"JARDIM BRASILANDIA - FRANCA\"},\"numeroCasa\":\"1156\",\"telefone\":\"(16)99214-5770\",\"celular\":\"(16)37253-850 \",\"email\":null,\"dataUltimaAtualizacao\":null,\"nomeMae\":\"APARECIDA FATIMA VIEIRA GUIRALDELLI\",\"sexo\":\"1\",\"doador\":null,\"tipoSanguineo\":null,\"mesesDataNascimento\":394}');
             this.ionViewDidEnter();
           }
         }
@@ -77,9 +79,18 @@ export class HomePage {
   }
 
   irParaExames(matricula: string) {
-    this.navCtrl.push(TiposExamesPage, {
-      matricula_id: matricula
-    });
+    if(matricula == '246182'){
+      this.navCtrl.push(TiposExamesPage, {
+        matricula_id: matricula
+      });
+    }else {
+      this.navCtrl.push(TiposExamestempPage, {
+        matricula_id: matricula
+      });
+    }
+    // this.navCtrl.push(TiposExamesPage, {
+    //   matricula_id: matricula
+    // });
   }
 
   deletaPaciente(matricula) {

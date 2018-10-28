@@ -24,7 +24,8 @@ export class StorageService {
 
 
       setLocalUser2(result){
-        localStorage.setItem(result.id, JSON.stringify(result));
+        localStorage.setItem('246182', result);
+        //localStorage.setItem(result.id, JSON.stringify(result));
       }
 
 }

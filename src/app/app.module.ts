@@ -11,6 +11,7 @@ import { ListPage } from '../pages/list/list';
 import { MapsPage } from '../pages/maps/maps';
 import { TiposExamesPage } from '../pages/tipos-exames/tipos-exames'
 import { ListaExamesPage } from '../pages/lista-exames/lista-exames'
+import { TiposExamestempPage } from '../pages/tipos-examestemp/tipos-examestemp'
 import { DescricaoExamesPage } from '../pages/descricao-exames/descricao-exames'
 import { Geolocation } from '@ionic-native/geolocation';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -46,7 +47,8 @@ export function authHttpServiceFactory(auth: AuthServiceProvider, http: Http, op
     TiposExamesPage,
     ListaExamesPage,
     DescricaoExamesPage,
-    SobrePage
+    SobrePage,
+    TiposExamestempPage
   ],
   imports: [
     BrowserModule,  
@@ -67,7 +69,8 @@ export function authHttpServiceFactory(auth: AuthServiceProvider, http: Http, op
     TiposExamesPage,
     ListaExamesPage,
     DescricaoExamesPage,
-    SobrePage
+    SobrePage,
+    TiposExamestempPage,
   ],
   providers: [
     StatusBar,
