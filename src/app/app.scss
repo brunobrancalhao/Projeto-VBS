@@ -114,12 +114,12 @@ ion-title {
 
 .popup-menu-panel .popup-menu-item {
   margin: auto;
-  -webkit-box-flex: 1 0 50%;
-  -webkit-flex: 1 0 50%;
-  -moz-box-flex: 1 0 50%;
-  -moz-flex: 1 0 50%;
-  -ms-flex: 1 0 50%;
-  flex: 1 0 50%;
+  -webkit-box-flex: 1 0 33%;
+  -webkit-flex: 1 0 33%;
+  -moz-box-flex: 1 0 33%;
+  -moz-flex: 1 0 33%;
+  -ms-flex: 1 0 33%;
+  flex: 1 0 33%;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -167,6 +167,15 @@ ion-title {
     background-size: 100%;
   }
 
+  .ico-favorite {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 10px auto 8px;
+    background: url('../assets/imgs/menu/ico-favorite.svg') center no-repeat;
+    background-size: 100%;
+  }
+
   .ico-exam {
     display: block;
     width: 30px;
@@ -184,13 +193,22 @@ ion-title {
     background: url('../assets/imgs/menu/ico-about.svg') center no-repeat;
     background-size: 100%;
   }
+
+  .ico-exit {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 6px;
+    background: url('../assets/imgs/menu/ico-exit.svg') center no-repeat;
+    background-size: 100%;
+  }
 }
 
 .popup-menu-panel .popup-menu-item span {
   margin: 5px 0px auto 0px;
   padding: 0px;
   color: white;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 400;
   font-family: 'Ubuntu', sans-serif;
   text-align: center;
