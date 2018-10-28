@@ -15,18 +15,6 @@
 
 
 <ion-content padding>
-  <!-- <ion-card *ngFor="let exam of exames">
-        <div class="content">
-          <ion-card-header>
-            {{exam.nomeExame}}
-          </ion-card-header>
-          <ion-card-content>
-              {{exam.justificativa}}
-          </ion-card-content>
-        </div>
-      </ion-card> -->
-
-  <!-- Fixo (inicio) -->
   <ion-card>
     <div class="content">
       <ion-card-header>
@@ -34,7 +22,7 @@
       </ion-card-header>
       <ion-card-content>
           <p>DIAGNÓSTICO POR IMAGEM</p>
-          <p>Status: Pronto</p>
+          <p>Status: <span>Pronto</span></p>
           <a href="http://www.dralonsolaboratorio.com.br/" target="_blank">Consultar Exame</a>
       </ion-card-content>
     </div>
@@ -46,7 +34,7 @@
       </ion-card-header>
       <ion-card-content>
           DESTINADO A EXAMINAR O COLON.
-          <p>Status: Aguardando</p>
+          <p>Status: <span>Aguardando</span></p>
       </ion-card-content>
     </div>
   </ion-card>
@@ -57,7 +45,7 @@
       </ion-card-header>
       <ion-card-content>
           AVALIAÇÃO ENDOSCÓPICA
-          <p>Status: Pronto</p>
+          <p>Status: <span>Pronto</span></p>
           <a href="http://www.labbioanalises.com/exames/" target="_blank">Consultar Exame</a>
       </ion-card-content>
     </div>
@@ -69,7 +57,7 @@
       </ion-card-header>
       <ion-card-content>
           CIRÚRGICA MINIMAMENTE INVASIVA
-          <p>Status: Pronto</p>
+          <p>Status: <span>Pronto</span></p>
           <a href="http://www.carloschagaslaboratorio.com.br/index2.html" target="_blank">Consultar Exame</a>
       </ion-card-content>
     </div>
@@ -81,7 +69,7 @@
       </ion-card-header>
       <ion-card-content>
           CIRURGIAS GINECOLÓGICAS E UROLÓGICAS
-          <p>Status: Aguardando</p>
+          <p>Status: <span>Aguardando</span></p>
       </ion-card-content>
     </div>
   </ion-card>
