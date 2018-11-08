@@ -25,14 +25,13 @@ export class ListaExamesPage {
     this.exames = [];
     var tipo_id = this.navParams.get('tipo_id');
     this.matricula = this.navParams.get('matricula');
-    // this.getExames(this.matricula,tipo_id);
+    this.getExames(this.matricula,tipo_id);
   }
 
   getExames(matricula,tipo_id){
     this.api.getListaExames(matricula,tipo_id).then((result: any)=>{
       if(result.length > 0){
         for (var i = 0; i < result.length; i++) {
-          console.log(result);
           this.exames.push(result[i]);
         }
       }

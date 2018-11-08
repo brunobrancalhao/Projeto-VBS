@@ -35,7 +35,8 @@ export class TiposExamesPage {
     var matricula_id = this.navParams.get('matricula_id');
     this.matricula = this.navParams.get('matricula_id');
     this.semExames = false;
-    // this.getExames(matricula_id);
+    console.log("aq");
+    this.getExames(matricula_id);
   }
 
   getExames(matricula_id) {
@@ -56,11 +57,9 @@ export class TiposExamesPage {
 
   irParaExamesDetalhes(matricula_id, tipo_id) {
     this.navCtrl.push(ListaExamesPage, {
+      tipo_id: tipo_id,
+      matricula: matricula_id
     });
-    // this.navCtrl.push(ListaExamesPage, {
-    //   tipo_id: tipo_id,
-    //   matricula: matricula_id
-    // });
   }
 
   goToPacient() {

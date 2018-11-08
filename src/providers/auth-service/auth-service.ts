@@ -34,9 +34,8 @@ export class AuthServiceProvider {
 
   successfullLogin(usuario: Usuario) {
     this.currentUser = usuario;
-    console.log(usuario);
-    this.ApiService.getCardSUS(usuario.cns);
-    //this.localStorage.setLocalUser2(usuario);
+    // this.ApiService.getCardSUS(usuario.cns);
+    this.localStorage.setLocalUser2(usuario);
 
     this.armazenarToken(usuario.token);
 

@@ -15,63 +15,19 @@
 
 
 <ion-content padding>
-  <ion-card>
-    <div class="content">
-      <ion-card-header>
-        COLANGIOPANCREATOGRAFIA RETROGRADA (VIA ENDOSCOPICA)
-      </ion-card-header>
-      <ion-card-content>
-        <p>DIAGNÓSTICO POR IMAGEM</p>
-        <p>Status: <span>Pronto</span></p>
-        <a href="http://www.dralonsolaboratorio.com.br/" target="_blank">Consultar Exame</a>
-      </ion-card-content>
-    </div>
-  </ion-card>
-  <ion-card>
-    <div class="content">
-      <ion-card-header>
-        COLONOSCOPIA (COLOSCOPIA)
-      </ion-card-header>
-      <ion-card-content>
-        <p>DESTINADO A EXAMINAR O COLON.</p>
-        <p>Status: <span>Aguardando</span></p>
-      </ion-card-content>
-    </div>
-  </ion-card>
-  <ion-card>
-    <div class="content">
-      <ion-card-header>
-        ESOFAGOGASTRODUODENOSCOPIA
-      </ion-card-header>
-      <ion-card-content>
-        <p>AVALIAÇÃO ENDOSCÓPICA</p>
-        <p>Status: <span>Pronto</span></p>
-        <a href="http://www.labbioanalises.com/exames/" target="_blank">Consultar Exame</a>
-      </ion-card-content>
-    </div>
-  </ion-card>
-  <ion-card>
-    <div class="content">
-      <ion-card-header>
-        LAPAROSCOPIA
-      </ion-card-header>
-      <ion-card-content>
-        <p>CIRÚRGICA MINIMAMENTE INVASIVA</p>
-        <p>Status: <span>Pronto</span></p>
-        <a href="http://www.carloschagaslaboratorio.com.br/index2.html" target="_blank">Consultar Exame</a>
-      </ion-card-content>
-    </div>
-  </ion-card>
-  <ion-card>
-    <div class="content">
-      <ion-card-header>
-        RETOSSIGMOIDOSCOPIA
-      </ion-card-header>
-      <ion-card-content>
-        <p>CIRURGIAS GINECOLÓGICAS E UROLÓGICAS</p>
-        <p>Status: <span>Aguardando</span></p>
-      </ion-card-content>
-    </div>
-  </ion-card>
+  <div class="card-wrapper" *ngFor="let exam of exames">
+    <ion-card>
+      <div class="content">
+        <ion-card-header>
+            {{exam.nomeExame}}
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{exam.nomeExame}}</p>
+          <p>Status: <span>Verificar</span></p>
+          <a href="http://www.dralonsolaboratorio.com.br/" target="_blank">Consultar Exame</a>
+        </ion-card-content>
+      </div>
+    </ion-card>
+  </div>
   <!-- Fixo (fim) -->
 </ion-content>

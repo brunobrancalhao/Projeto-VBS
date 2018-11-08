@@ -20,20 +20,20 @@ export class ApiProvider {
   }
 
   getCardSUS(cns){
-    this.localStorage.setLocalUser2('{\"id\":246182,\"nome\":\"MARIA DAS DORES DE ANDRADE\",\"cartaoSus\":\"706409191146682\",\"dataNascimento\":-1001797200000,\"rua\":{\"id\":558,\"nome\":\"RUA PRUDENTE DE MORAIS - FRANCA\"},\"bairro\":{\"id\":44,\"nome\":\"CIDADE NOVA - FRANCA\"},\"numeroCasa\":\"884\",\"telefone\":\"(16)37229-930 \",\"celular\":\"(16)99201-7755\",\"email\":null,\"dataUltimaAtualizacao\":null,\"nomeMae\":\"MARIA ANTONIA DE JESUS\",\"sexo\":\"2\",\"doador\":\"0\",\"tipoSanguineo\":null,\"mesesDataNascimento\":966}');
-    // return new Promise((resolve,reject)=>{
-    //   this.http.get(this.url+cns).subscribe((result: any)=> {
-    //     try{
-    //       this.localStorage.setLocalUser2(result.json());
-    //     }catch{
-    //       this.toast.create({message:'Cartão do SUS não encontrado', position: 'botton', duration: 30000});
-    //     }
+    //this.localStorage.setLocalUser2('{\"id\":246182,\"nome\":\"MARIA DAS DORES DE ANDRADE\",\"cartaoSus\":\"706409191146682\",\"dataNascimento\":-1001797200000,\"rua\":{\"id\":558,\"nome\":\"RUA PRUDENTE DE MORAIS - FRANCA\"},\"bairro\":{\"id\":44,\"nome\":\"CIDADE NOVA - FRANCA\"},\"numeroCasa\":\"884\",\"telefone\":\"(16)37229-930 \",\"celular\":\"(16)99201-7755\",\"email\":null,\"dataUltimaAtualizacao\":null,\"nomeMae\":\"MARIA ANTONIA DE JESUS\",\"sexo\":\"2\",\"doador\":\"0\",\"tipoSanguineo\":null,\"mesesDataNascimento\":966}');
+    return new Promise((resolve,reject)=>{
+      this.http.get(this.url+cns).subscribe((result: any)=> {
+        try{
+          this.localStorage.setLocalUser2(result.json());
+        }catch{
+          this.toast.create({message:'Cartão do SUS não encontrado', position: 'botton', duration: 30000});
+        }
         
-    //   },
-    //   (error) => {
-    //     reject(error.json());
-    //   });
-    // });
+      },
+      (error) => {
+        reject(error.json());
+      });
+    });
   }
 
   getExames(matricula_id){
